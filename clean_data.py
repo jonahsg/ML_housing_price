@@ -50,6 +50,11 @@ train = train[~missingRows]
 hs_na = train.isna().sum()
 hs_na.plot.bar()
 
+# Finished Basement Sq-ft
+train['FinBsmtSF'] = train['TotalBsmtSF'] - train['BsmtUnfSF']
+
+# Total SF
+train['TotalSF'] = train['TotalBsmtSF'] + train['1stFlrSF'] + train['2ndFlrSF']
 
 # Zoning Dummy
 
