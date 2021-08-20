@@ -143,3 +143,18 @@ train = train.drop(coldrop, axis = 1)
 
 train = train[train.dist<500]
 train['dist'].max()
+
+Y = train[['SalePrice']]
+X1 = train[['LotFrontage', 'LotArea', 'OverallQual', 'OverallCond', 'YearRemodAdd', 
+           'BsmtUnfSF', 'BedroomAbvGr', 'KitchenQual', 'TotRmsAbvGrd', 'Fireplaces', 'GarageArea', 
+           'MiscVal', 'bathrm_cnt', 'patioSF', 'dist', 'income', 'FinBsmtSF', 'TotalSF', 
+           'hood_Blmngtn', 'hood_BrDale', 'hood_BrkSide', 'hood_ClearCr', 
+           'hood_CollgCr', 'hood_Crawfor', 'hood_Edwards', 'hood_Gilbert', 
+           'hood_Greens', 'hood_IDOTRR', 'hood_MeadowV', 'hood_Mitchel', 
+           'hood_NPkVill', 'hood_NWAmes', 'hood_NoRidge', 'hood_NridgHt', 
+           'hood_OldTown', 'hood_SWISU', 'hood_Sawyer', 'hood_SawyerW', 
+           'hood_Somerst', 'hood_StoneBr', 'hood_Timber', 'hood_Veenker', 
+           'MSZoning_RH', 'MSZoning_RL', 'MSZoning_RM', 'NearRR', 'NearPos', 
+           'Artery', 'BldgType_2fmCon', 'BldgType_Duplex', 'BldgType_Twnhs', 
+           'BldgType_TwnhsE', 'HouseStyle_1.5Fin', 'HouseStyle_2Story', 
+           'HouseStyle_SFoyer', 'HouseStyle_SLvl']]
