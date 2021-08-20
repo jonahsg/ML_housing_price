@@ -110,9 +110,6 @@ def qual_to_num_kit(df):
 # Replacing Kitchen Qual string values with numerical
 train['KitchenQual'] = train.apply(qual_to_num_kit, axis = 1)
 
-train.shape
-
-train.columns
 
 # Building Types
 
@@ -134,12 +131,10 @@ dum_housestyle.drop('HouseStyle_'+str(train['HouseStyle'].mode()[0]), axis=1, in
 train = pd.concat([train, dum_housestyle], axis=1)
 
 
-train.shape
-
-train.columns
 
 coldrop = ['Unnamed: 0','Unnamed: 0.1','MSSubClass']
 train = train.drop(coldrop, axis = 1)
 
-train.shape
 
+train = train[train.dist<500]
+train['dist'].max()
