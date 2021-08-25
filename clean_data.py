@@ -56,6 +56,9 @@ train['FinBsmtSF'] = train['TotalBsmtSF'] - train['BsmtUnfSF']
 # Total SF
 train['TotalSF'] = train['TotalBsmtSF'] + train['1stFlrSF'] + train['2ndFlrSF']
 
+train['bsmt_above_ratio'] = train['TotalBsmtSF']/(train['1stFlrSF'] + train['2ndFlrSF'])
+
+
 # Zoning Dummy
 
 dummies = pd.get_dummies(train, prefix=['MSZoning'], columns = ['MSZoning'], drop_first = True)
@@ -167,4 +170,4 @@ X1 = train[['LotFrontage', 'LotArea', 'OverallQual', 'OverallCond', 'YearRemodAd
            'Artery', 'BldgType_2fmCon', 'BldgType_Duplex', 'BldgType_Twnhs', 
            'BldgType_TwnhsE', 'HouseStyle_1.5Fin', 'HouseStyle_2Story', 
            'HouseStyle_SFoyer', 'HouseStyle_SLvl','Bsmt_ratio','Bedr_ratio',
-           'TotalBsmtSF']]
+           'TotalBsmtSF','bsmt_above_ratio']]

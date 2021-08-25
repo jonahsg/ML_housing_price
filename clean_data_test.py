@@ -56,6 +56,8 @@ test['FinBsmtSF'] = test['TotalBsmtSF'] - test['BsmtUnfSF']
 # Total SF
 test['TotalSF'] = test['TotalBsmtSF'] + test['1stFlrSF'] + test['2ndFlrSF']
 
+test['bsmt_above_ratio'] = test['TotalBsmtSF']/(test['1stFlrSF'] + test['2ndFlrSF'])
+
 # Zoning Dummy
 
 dummies = pd.get_dummies(test, prefix=['MSZoning'], columns = ['MSZoning'], drop_first = True)
@@ -167,4 +169,4 @@ X1_test = test[['LotFrontage', 'LotArea', 'OverallQual', 'OverallCond', 'YearRem
            'Artery', 'BldgType_2fmCon', 'BldgType_Duplex', 'BldgType_Twnhs', 
            'BldgType_TwnhsE', 'HouseStyle_1.5Fin', 'HouseStyle_2Story', 
            'HouseStyle_SFoyer', 'HouseStyle_SLvl','Bsmt_ratio','Bedr_ratio',
-           'TotalBsmtSF']]
+           'TotalBsmtSF','bsmt_above_ratio']]
