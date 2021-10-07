@@ -1,7 +1,7 @@
 # Machine Learning Housing Price Project
-Ben Burkey, Jonah Gerstel, Michael McGuigan, Lena Chretien
+Team: Ben Burkey, Jonah Gerstel, Michael McGuigan, Lena Chretien
 
-## Dataset Used
+## Datasets Used
 
 -  https://www.kaggle.com/c/house-prices-advanced-regression-techniques
 -  Various Census Data (ex. Median Income)
